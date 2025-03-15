@@ -1,7 +1,6 @@
-// File: components/ItemList.js
 import React from 'react';
 import { FaLeaf } from 'react-icons/fa';
-
+import  './ItemList.css'; // Ensure correct path
 function ItemList({ items, addToCart }) {
   if (!items || items.length === 0) {
     return <div className="no-items">No items available</div>;
@@ -27,3 +26,5 @@ function ItemList({ items, addToCart }) {
     </div>
   );
 }
+
+export default ItemList; // ✅ Ensure default export

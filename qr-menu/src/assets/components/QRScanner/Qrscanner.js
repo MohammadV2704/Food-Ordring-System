@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { QrReader } from 'react-qr-reader'; // Ensure this is installed properly
 import { useNavigate } from 'react-router-dom';
-import './Qrscanner.css'; // Ensure correct path
 
 function QRScanner({ onScan }) {
   const [error, setError] = useState('');

@@ -1,7 +1,7 @@
-// File: components/Cart.js
 import React from 'react';
-import 'Cart.css'
-function Cart({ cart, removeFromCart }) {
+import './Cart.css'; // Ensure correct path
+
+function Cart({ cart, removeFromCart, addToCart }) { // ✅ addToCart added
   const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
   
   return (
@@ -17,7 +17,7 @@ function Cart({ cart, removeFromCart }) {
             <div className="cart-item-actions">
               <button onClick={() => removeFromCart(item.id)}>-</button>
               <span>{item.quantity}</span>
-              <button onClick={() => addToCart(item)}>+</button>
+              <button onClick={() => addToCart(item)}>+</button> {/* ✅ Now it works */}
             </div>
           </div>
         ))}
@@ -29,3 +29,5 @@ function Cart({ cart, removeFromCart }) {
     </div>
   );
 }
+
+export default Cart; // ✅ Ensure default export

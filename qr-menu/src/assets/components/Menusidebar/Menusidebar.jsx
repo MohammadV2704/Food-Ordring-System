@@ -1,6 +1,5 @@
-// File: components/MenuSidebar.js
 import React from 'react';
-
+import './MenuSidebar.css'; // Ensure correct path
 function MenuSidebar({ categories, selectedCategory, setSelectedCategory }) {
   return (
     <div className="sidebar">
@@ -19,3 +18,5 @@ function MenuSidebar({ categories, selectedCategory, setSelectedCategory }) {
     </div>
   );
 }
+
+export default MenuSidebar; // ✅ Ensure default export

@@ -2,7 +2,7 @@
 import React from 'react';
 import { FaSearch } from 'react-icons/fa';
 import Menusidebar from '../Menusidebar/Menusidebar';
-
+import './Header.css'; // Ensure correct path
 const Header = ({ restaurant, vegOnly, setVegOnly }) => {
   return (
     <header className="header">
